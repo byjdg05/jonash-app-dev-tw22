@@ -1,0 +1,204 @@
+/* =====================
+   RESET & BASE STYLES
+===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f1f5f9, #e5e7eb);
+    color: #1f2937;
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+/* =====================
+   MAIN CONTAINER
+===================== */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background: #ffffff;
+    padding: 35px 40px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* =====================
+   HEADER
+===================== */
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    font-size: 2.3rem;
+    color: #0f172a;
+}
+
+.role {
+    font-size: 1.1rem;
+    color: #2563eb;
+    margin-top: 6px;
+    font-weight: 600;
+}
+
+/* Divider */
+hr {
+    border: none;
+    height: 1px;
+    background: #e5e7eb;
+    margin: 25px 0;
+}
+
+/* =====================
+   CONTACT INFO
+===================== */
+.info {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    background: #f8fafc;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.info p {
+    font-size: 0.95rem;
+    color: #334155;
+}
+
+/* =====================
+   TWO-COLUMN SECTION LAYOUT
+===================== */
+.about,
+.education,
+.skills,
+.experience,
+.certifications {
+    background: #f8fafc;
+    padding: 20px 22px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+}
+
+/* Grid layout for skills & experience */
+.skills,
+.experience {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Make education single column but styled */
+.education p {
+    margin-bottom: 14px;
+    color: #334155;
+}
+
+/* =====================
+   HEADINGS
+===================== */
+h2 {
+    grid-column: 1 / -1;
+    font-size: 1.35rem;
+    color: #0f172a;
+    margin-bottom: 12px;
+    border-left: 5px solid #2563eb;
+    padding-left: 12px;
+}
+
+h3 {
+    font-size: 1.05rem;
+    color: #2563eb;
+    margin-bottom: 8px;
+}
+
+/* =====================
+   ABOUT
+===================== */
+.about p {
+    font-size: 1rem;
+    color: #475569;
+}
+
+/* =====================
+   SKILLS
+===================== */
+.skill-group ul {
+    list-style: none;
+}
+
+.skill-group li {
+    background: #ffffff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+    color: #334155;
+    border: 1px solid #e5e7eb;
+}
+
+/* =====================
+   EXPERIENCE
+===================== */
+.exp-item ul {
+    padding-left: 18px;
+    color: #334155;
+}
+
+.exp-item li {
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+.exp-date {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 6px;
+}
+
+/* =====================
+   CERTIFICATIONS
+===================== */
+.certifications ul {
+    list-style: none;
+}
+
+.certifications li {
+    background: linear-gradient(135deg, #e0e7ff, #f1f5ff);
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: #1e3a8a;
+    font-weight: 500;
+}
+
+/* =====================
+   RESPONSIVE DESIGN
+===================== */
+@media (max-width: 768px) {
+    .skills,
+    .experience {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 25px;
+    }
+
+    .header h1 {
+        font-size: 1.9rem;
+    }
+
+    .info {
+        flex-direction: column;
+    }
+}
