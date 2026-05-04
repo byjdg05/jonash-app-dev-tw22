@@ -21,6 +21,9 @@
 
     <!-- Header -->
     <div class="header">
+    <div class="profile-photo">
+        <img src="profile.jpg" alt="Profile Photo">
+    </div>
         <h1><?= $name ?></h1>
         <p class="role"><?= $role ?></p>
     </div>
@@ -76,11 +79,11 @@
         <div class="skill-group">
             <h3>Technical Skills</h3>
             <ul>
-                <li>Basic HTML & CSS</li>
+                <li>Basic HTML, Javascript & CSS</li>
                 <li>PHP Fundamentals</li>
                 <li>Responsive Web Design (Beginner)</li>
-                <li>Visual Studio Code</li>
-                <li>Basic Debugging</li>
+                <li>Visual Studio</li>
+                <li>Basic UX/UI Design</li>
             </ul>
         </div>
 
@@ -91,6 +94,7 @@
                 <li>Basic Digital Marketing</li>
                 <li>Audience Engagement Handling</li>
                 <li>Online Customer Communication</li>
+                <li>Simple Video Editing</li>
             </ul>
         </div>
 
