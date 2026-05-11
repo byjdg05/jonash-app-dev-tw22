@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Student Registration - Declared Data</title>
+    <title>Student Registration - Summary</title>
     <style>
         body { font-family: 'Segoe UI', sans-serif; background-color: #f0f4f8; padding: 40px; }
         .form-card { 
@@ -9,25 +9,24 @@
             border-radius: 12px; padding: 30px; border: 1px solid #e2e8f0;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
-        .section-title { 
-            background: #1e293b; color: white; padding: 10px; 
-            font-size: 12px; text-transform: uppercase; letter-spacing: 1px;
-            margin: 20px 0 15px 0; border-radius: 4px;
-        }
-        .input-row { margin-bottom: 15px; display: flex; align-items: center; }
-        label { width: 180px; font-weight: 600; font-size: 14px; color: #475569; }
-        input { 
-            flex: 1; padding: 8px; border: none; 
-            border-bottom: 2px solid #cbd5e1; background: transparent; outline: none;
-            color: #1e293b; font-size: 15px;
-        }
         h1 { text-align: center; color: #0f172a; margin-bottom: 30px; }
+        
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th { 
+            background: #1e293b; color: white; padding: 12px; 
+            text-align: left; text-transform: uppercase; font-size: 12px; letter-spacing: 1px;
+        }
+        td { 
+            padding: 12px; border-bottom: 1px solid #e2e8f0; 
+            font-size: 14px; color: #334155; 
+        }
+        .label-cell { font-weight: 600; width: 200px; color: #475569; background: #f8fafc; }
     </style>
 </head>
 <body>
 
 <?php
-
+    // DECLARED VARIABLES
     $raw_name     = "jonash aaron de guia";
     $raw_email    = "jcdeguia1@fit.edu.ph";
     $phone        = "09126789012";
@@ -41,6 +40,7 @@
     $raw_school   = "FEU Institute of Technology";
     $address      = "Metro Manila, Philippines";
 
+    // STRING FORMATTING
     $f_name      = ucwords(strtolower($raw_name));
     $f_email     = strtolower($raw_email);
     $f_course    = strtoupper($raw_course);
@@ -51,66 +51,61 @@
 ?>
 
 <div class="form-card">
-    <h1>Student Registration</h1>
+    <h1>Student Registration Form</h1>
 
-    <div class="section-title">Personal Information</div>
-    
-    <div class="input-row">
-        <label>Full Name:</label>
-        <input type="text" value="<?php echo $f_name; ?>" readonly>
-    </div>
+    <table>
+        <tr>
+            <th colspan="2">Personal Information</th>
+        </tr>
+        <tr>
+            <td class="label-cell">Full Name</td>
+            <td><?php echo $f_name; ?></td>
+        </tr>
+        <tr>
+            <td class="label-cell">Date of Birth</td>
+            <td><?php echo $f_bday; ?></td>
+        </tr>
+        <tr>
+            <td class="label-cell">Gender</td>
+            <td><?php echo $gender; ?></td>
+        </tr>
+        <tr>
+            <td class="label-cell">Civil Status</td>
+            <td><?php echo $f_status; ?></td>
+        </tr>
+        <tr>
+            <td class="label-cell">Religion</td>
+            <td><?php echo $f_religion; ?></td>
+        </tr>
+        <tr>
+            <td class="label-cell">Email Address</td>
+            <td><?php echo $f_email; ?></td>
+        </tr>
+        <tr>
+            <td class="label-cell">Phone Number</td>
+            <td><?php echo $phone; ?></td>
+        </tr>
 
-    <div class="input-row">
-        <label>Date of Birth:</label>
-        <input type="text" value="<?php echo $f_bday; ?>" readonly>
-    </div>
-
-    <div class="input-row">
-        <label>Gender:</label>
-        <input type="text" value="<?php echo $gender; ?>" readonly>
-    </div>
-
-    <div class="input-row">
-        <label>Civil Status:</label>
-        <input type="text" value="<?php echo $f_status; ?>" readonly>
-    </div>
-
-    <div class="input-row">
-        <label>Religion:</label>
-        <input type="text" value="<?php echo $f_religion; ?>" readonly>
-    </div>
-
-    <div class="input-row">
-        <label>Email Address:</label>
-        <input type="text" value="<?php echo $f_email; ?>" readonly>
-    </div>
-
-    <div class="input-row">
-        <label>Phone Number:</label>
-        <input type="text" value="<?php echo $phone; ?>" readonly>
-    </div>
-
-    <div class="section-title">Academic Details</div>
-
-    <div class="input-row">
-        <label>Course/Program:</label>
-        <input type="text" value="<?php echo $f_course; ?>" readonly>
-    </div>
-
-    <div class="input-row">
-        <label>Year Level:</label>
-        <input type="text" value="<?php echo $year; ?>" readonly>
-    </div>
-
-    <div class="input-row">
-        <label>Current School:</label>
-        <input type="text" value="<?php echo $f_school; ?>" readonly>
-    </div>
-
-    <div class="input-row">
-        <label>Home Address:</label>
-        <input type="text" value="<?php echo $address; ?>" readonly>
-    </div>
+        <tr>
+            <th colspan="2">Academic Details</th>
+        </tr>
+        <tr>
+            <td class="label-cell">Course/Program</td>
+            <td><?php echo $f_course; ?></td>
+        </tr>
+        <tr>
+            <td class="label-cell">Year Level</td>
+            <td><?php echo $year; ?></td>
+        </tr>
+        <tr>
+            <td class="label-cell">Current School</td>
+            <td><?php echo $f_school; ?></td>
+        </tr>
+        <tr>
+            <td class="label-cell">Home Address</td>
+            <td><?php echo $address; ?></td>
+        </tr>
+    </table>
 </div>
 
 </body>
